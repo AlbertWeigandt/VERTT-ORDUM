@@ -1,0 +1,536 @@
+/* =========================================================
+   VERTT-ORDUM
+   RESPONSIVE
+   ========================================================= */
+
+
+/* =========================================================
+   TABLETS
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .container {
+        width: min(
+            calc(100% - 48px),
+            var(--container)
+        );
+    }
+
+
+    /* HEADER */
+
+    .header-content {
+        gap: 22px;
+    }
+
+    .main-nav {
+        gap: 22px;
+    }
+
+    .main-nav a {
+        font-size: 0.76rem;
+    }
+
+
+    /* HERO */
+
+    .hero,
+    .hero-content {
+        min-height: 650px;
+    }
+
+    .hero h1 {
+        font-size: clamp(3.8rem, 7vw, 5.8rem);
+    }
+
+    .hero-copy {
+        max-width: 600px;
+    }
+
+    .hero-side-copy {
+        display: none;
+    }
+
+
+    /* VEÍCULOS */
+
+    .vehicle-layout {
+        grid-template-columns: 85px 1fr;
+    }
+
+    .vehicle-list {
+        grid-template-columns: repeat(5, minmax(80px, 1fr));
+    }
+
+    .vehicle-card:nth-child(n + 6) {
+        display: none;
+    }
+
+
+    /* CATEGORIAS */
+
+    .categories-layout {
+        grid-template-columns: 150px 1fr;
+    }
+
+    .categories-intro h2,
+    .products-heading h2 {
+        font-size: 2.1rem;
+    }
+
+    .categories-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* PRODUTOS */
+
+    .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .product-card:nth-child(n + 4) {
+        display: none;
+    }
+
+
+    /* BENEFÍCIOS */
+
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .benefit-item:nth-child(2) {
+        border-right: 0;
+    }
+
+    .benefit-item:nth-child(-n + 2) {
+        border-bottom: 1px solid var(--border);
+    }
+
+
+    /* FOOTER */
+
+    .footer-grid {
+        grid-template-columns: 1.4fr 1fr 1fr;
+    }
+
+    .footer-social {
+        align-items: flex-start;
+    }
+
+}
+
+
+/* =========================================================
+   TABLETS PEQUENOS
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .container {
+        width: min(
+            calc(100% - 36px),
+            var(--container)
+        );
+    }
+
+
+    /* HEADER */
+
+    .site-header {
+        position: absolute;
+    }
+
+    .header-content {
+        min-height: 76px;
+    }
+
+    .brand-text {
+        font-size: 1.25rem;
+    }
+
+    .main-nav {
+        display: none;
+    }
+
+
+    /* HERO */
+
+    .hero,
+    .hero-content {
+        min-height: 610px;
+    }
+
+    .hero-copy {
+        padding-top: 45px;
+    }
+
+    .hero h1 {
+        font-size: clamp(3.4rem, 11vw, 5rem);
+    }
+
+    .hero-description {
+        max-width: 430px;
+        font-size: 0.88rem;
+    }
+
+
+    /* VEÍCULOS */
+
+    .vehicle-layout {
+        grid-template-columns: 70px 1fr;
+        gap: 18px;
+    }
+
+    .vehicle-list {
+        grid-template-columns: repeat(4, minmax(80px, 1fr));
+    }
+
+    .vehicle-card:nth-child(n + 5) {
+        display: none;
+    }
+
+
+    /* CATEGORIAS */
+
+    .categories-layout {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .categories-intro h2,
+    .products-heading h2 {
+        font-size: 2.5rem;
+    }
+
+    .categories-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* PRODUTOS */
+
+    .products-heading {
+        align-items: flex-start;
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .product-card:nth-child(n + 3) {
+        display: none;
+    }
+
+
+    /* CAMPO / CIDADE */
+
+    .field-city-banner {
+        min-height: 270px;
+    }
+
+    .field-city-content {
+        min-height: 270px;
+    }
+
+    .field-city-content h2 {
+        font-size: clamp(2.7rem, 9vw, 4rem);
+    }
+
+    .brazil-accent {
+        width: 48px;
+    }
+
+    .brazil-accent span:nth-child(1) {
+        right: 32px;
+    }
+
+    .brazil-accent span:nth-child(2) {
+        right: 18px;
+    }
+
+    .brazil-accent span:nth-child(3) {
+        right: 4px;
+    }
+
+
+    /* FOOTER */
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+
+}
+
+
+/* =========================================================
+   CELULARES
+   ========================================================= */
+
+@media (max-width: 560px) {
+
+    .container {
+        width: calc(100% - 28px);
+    }
+
+
+    /* HEADER */
+
+    .header-content {
+        min-height: 70px;
+    }
+
+    .brand-mark {
+        width: 30px;
+        height: 30px;
+    }
+
+    .brand-text {
+        font-size: 1.08rem;
+    }
+
+    .header-actions {
+        gap: 4px;
+    }
+
+    .header-icon {
+        width: 31px;
+        height: 31px;
+    }
+
+
+    /* HERO */
+
+    .hero,
+    .hero-content {
+        min-height: 570px;
+    }
+
+    .hero-copy {
+        padding-top: 35px;
+    }
+
+    .eyebrow {
+        margin-bottom: 13px;
+
+        font-size: 0.62rem;
+
+        letter-spacing: 0.20em;
+    }
+
+    .hero h1 {
+        font-size: clamp(3rem, 15vw, 4.5rem);
+
+        line-height: 0.84;
+    }
+
+    .hero-description {
+        margin-top: 21px;
+
+        max-width: 330px;
+
+        font-size: 0.80rem;
+
+        line-height: 1.55;
+    }
+
+    .hero-description + .button {
+        margin-top: 22px;
+    }
+
+    .button {
+        min-height: 43px;
+
+        padding: 0 17px;
+
+        font-size: 0.63rem;
+    }
+
+
+    /* VEÍCULOS */
+
+    .vehicle-strip {
+        padding: 22px 0;
+    }
+
+    .vehicle-layout {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .vehicle-intro {
+        gap: 10px;
+    }
+
+    .vertical-line {
+        width: 100%;
+        height: 2px;
+    }
+
+    .vehicle-intro p {
+        display: none;
+    }
+
+    .vehicle-list {
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 12px;
+    }
+
+    .vehicle-card:nth-child(n + 4) {
+        display: none;
+    }
+
+    .vehicle-placeholder {
+        height: 40px;
+    }
+
+    .vehicle-card > span {
+        font-size: 0.56rem;
+    }
+
+
+    /* CATEGORIAS */
+
+    .categories-section {
+        padding: 56px 0 62px;
+    }
+
+    .categories-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .category-card {
+        min-height: 270px;
+    }
+
+    .categories-intro h2,
+    .products-heading h2 {
+        font-size: 2.35rem;
+    }
+
+
+    /* PRODUTOS */
+
+    .products-section {
+        padding: 54px 0 62px;
+    }
+
+    .products-heading {
+        display: block;
+    }
+
+    .see-all {
+        display: inline-block;
+
+        margin-top: 16px;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-card:nth-child(n + 2) {
+        display: none;
+    }
+
+
+    /* CAMPO / CIDADE */
+
+    .field-city-banner {
+        min-height: 245px;
+    }
+
+    .field-city-content {
+        min-height: 245px;
+    }
+
+    .field-city-content h2 {
+        font-size: 3rem;
+    }
+
+    .field-city-content p {
+        max-width: 230px;
+        font-size: 0.68rem;
+    }
+
+
+    /* BENEFÍCIOS */
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .benefit-item {
+        min-height: 70px;
+
+        border-right: 0;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .benefit-item:last-child {
+        border-bottom: 0;
+    }
+
+
+    /* FOOTER */
+
+    .site-footer {
+        padding-top: 42px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+
+        gap: 28px;
+    }
+
+    .footer-brand {
+        grid-column: auto;
+    }
+
+    .footer-social {
+        align-items: flex-start;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 7px;
+    }
+
+}
+
+
+/* =========================================================
+   CELULARES MUITO PEQUENOS
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+    .hero h1 {
+        font-size: 2.75rem;
+    }
+
+    .brand-text {
+        font-size: 0.98rem;
+    }
+
+    .header-icon {
+        width: 28px;
+        height: 28px;
+
+        font-size: 0.9rem;
+    }
+
+    .categories-intro h2,
+    .products-heading h2 {
+        font-size: 2.1rem;
+    }
+
+}

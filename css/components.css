@@ -1,0 +1,428 @@
+
+/* =========================================================
+   VERTT-ORDUM
+   COMPONENTS
+   ========================================================= */
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.site-header .brand {
+    transition: opacity var(--transition);
+}
+
+.site-header .brand:hover {
+    opacity: 0.88;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero-copy {
+    position: relative;
+}
+
+.hero-copy::after {
+    content: "";
+
+    position: absolute;
+
+    left: -90px;
+    top: 30px;
+
+    width: 180px;
+    height: 180px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(241, 189, 50, 0.08),
+            transparent 70%
+        );
+
+    filter: blur(15px);
+
+    pointer-events: none;
+
+    z-index: -1;
+}
+
+.hero h1 {
+    text-shadow:
+        0 4px 30px rgba(0, 0, 0, 0.45);
+}
+
+.hero-side-copy {
+    border-left: 1px solid rgba(255, 255, 255, 0.14);
+
+    padding-left: 20px;
+}
+
+
+/* =========================================================
+   VEHICLE STRIP
+   ========================================================= */
+
+.vehicle-list {
+    overflow: hidden;
+}
+
+.vehicle-card {
+    min-width: 0;
+
+    opacity: 0.92;
+
+    transition:
+        opacity var(--transition),
+        transform var(--transition);
+}
+
+.vehicle-card:hover {
+    opacity: 1;
+
+    transform: translateY(-2px);
+}
+
+.vehicle-placeholder {
+    position: relative;
+
+    overflow: hidden;
+}
+
+.vehicle-placeholder::before {
+    content: "";
+
+    position: absolute;
+
+    left: 18%;
+    right: 18%;
+    bottom: 6px;
+
+    height: 20px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            ellipse,
+            rgba(255,255,255,0.22),
+            transparent 68%
+        );
+
+    filter: blur(5px);
+}
+
+/*
+   No início os veículos são placeholders.
+   Quando colocarmos as imagens reais,
+   elas entrarão aqui sem precisar alterar
+   a estrutura da página.
+*/
+
+.vehicle-placeholder.s1000rr,
+.vehicle-placeholder.cb1000r {
+    background:
+        radial-gradient(
+            ellipse at center,
+            rgba(255,255,255,0.13),
+            transparent 67%
+        );
+}
+
+
+/* =========================================================
+   CATEGORIAS
+   ========================================================= */
+
+.category-card {
+    transition:
+        border-color var(--transition),
+        transform var(--transition);
+}
+
+.category-card:hover {
+    transform: translateY(-3px);
+}
+
+.category-number {
+    font-family: "Barlow Condensed", sans-serif;
+}
+
+.category-arrow {
+    transition:
+        transform var(--transition),
+        color var(--transition);
+}
+
+.category-card:hover .category-arrow {
+    color: var(--gold-light);
+
+    transform: translateX(4px);
+}
+
+
+/* =========================================================
+   PRODUTOS
+   ========================================================= */
+
+.product-card {
+    transition:
+        transform var(--transition),
+        border-color var(--transition);
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+
+    border-color: rgba(241, 189, 50, 0.40);
+}
+
+.product-image {
+    position: relative;
+
+    overflow: hidden;
+}
+
+.product-image::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            transparent,
+            rgba(255,255,255,0.04)
+        );
+
+    pointer-events: none;
+}
+
+.product-1::after {
+    width: 48%;
+    height: 48%;
+
+    top: 24%;
+    left: 26%;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(255,255,255,0.14),
+            transparent 64%
+        );
+}
+
+.product-2::after {
+    width: 30%;
+    height: 65%;
+
+    top: 18%;
+    left: 35%;
+
+    border-radius: 40%;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255,255,255,0.13),
+            rgba(255,255,255,0.03)
+        );
+}
+
+.product-3::after {
+    width: 60%;
+    height: 36%;
+
+    top: 31%;
+    left: 20%;
+
+    border-radius: 8px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 221, 80, 0.72),
+            rgba(255,255,255,0.10)
+        );
+}
+
+.product-4::after {
+    width: 50%;
+    height: 50%;
+
+    top: 25%;
+    left: 25%;
+
+    border-radius: 50%;
+
+    border: 5px solid rgba(220,220,220,0.20);
+
+    background: transparent;
+}
+
+.product-5::after {
+    width: 60%;
+    height: 50%;
+
+    top: 25%;
+    left: 20%;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,0.12),
+            rgba(255,255,255,0.03)
+        );
+}
+
+
+/* =========================================================
+   BOTÃO DE CARRINHO
+   ========================================================= */
+
+.add-cart {
+    position: relative;
+    overflow: hidden;
+}
+
+.add-cart::after {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -80%;
+
+    width: 60%;
+    height: 100%;
+
+    transform: skewX(-25deg);
+
+    background:
+        rgba(255,255,255,0.20);
+
+    transition: left 0.45s ease;
+}
+
+.add-cart:hover::after {
+    left: 125%;
+}
+
+
+/* =========================================================
+   CAMPO → CIDADE
+   ========================================================= */
+
+.field-city-banner::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent 55%,
+            rgba(0,0,0,0.26),
+            transparent
+        );
+
+    pointer-events: none;
+}
+
+.field-city-content {
+    position: relative;
+    z-index: 5;
+}
+
+.field-city-content h2 {
+    text-shadow:
+        0 4px 25px rgba(0,0,0,0.45);
+}
+
+
+/* =========================================================
+   BENEFÍCIOS
+   ========================================================= */
+
+.benefit-item {
+    transition:
+        background var(--transition);
+}
+
+.benefit-item:hover {
+    background: rgba(255,255,255,0.018);
+}
+
+.benefit-icon {
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer-brand .brand-mark {
+    width: 31px;
+    height: 31px;
+}
+
+.footer-social a {
+    transition:
+        color var(--transition),
+        transform var(--transition);
+}
+
+.footer-social a:hover {
+    color: var(--gold-light);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   ACABAMENTO
+   ========================================================= */
+
+.categories-section,
+.products-section,
+.vehicle-strip,
+.benefits-section {
+    position: relative;
+}
+
+.categories-section::before,
+.products-section::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 50%;
+
+    width: 500px;
+    height: 1px;
+
+    transform: translateX(-50%);
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(241,189,50,0.10),
+            transparent
+        );
+}
