@@ -6,8 +6,8 @@
         button.addEventListener("click", function () {
             document.dispatchEvent(new CustomEvent("vertt-ordum:add-to-cart", {
                 detail: {
-                    id: "shampoo-automotivo-premium-1l",
-                    name: "Shampoo Automotivo Premium 1L",
+                    id: "produto-1",
+                    name: "Kit Shampoo Automotivo Premium 1L",
                     price: 49.90
                 }
             }));
