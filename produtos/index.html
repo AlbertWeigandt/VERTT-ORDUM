@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore os produtos VERTT-ORDUM para lavagem, acabamento e cuidado automotivo.">
+    <title>Produtos | VERTT-ORDUM</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <style>
+        .catalog-hero{padding:82px 0 58px;border-bottom:1px solid var(--border);background:radial-gradient(ellipse at 80% 0%,rgba(241,189,50,.12),transparent 45%),linear-gradient(120deg,#080808,#111)}
+        .catalog-hero h1{margin:12px 0;font-family:"Barlow Condensed",sans-serif;font-size:clamp(3.5rem,8vw,6.5rem);line-height:.92;font-weight:900;letter-spacing:-.025em}
+        .catalog-hero h1 strong{color:var(--gold)}
+        .catalog-hero p{max-width:580px;color:var(--white-soft);line-height:1.8}
+        .catalog-toolbar{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:30px 0}
+        .catalog-count{color:var(--white-muted);font-size:.8rem}
+        .catalog-filter{display:flex;gap:8px;flex-wrap:wrap}
+        .catalog-filter a{padding:9px 13px;border:1px solid var(--border-strong);color:var(--white-soft);font-size:.72rem;text-decoration:none}
+        .catalog-filter a:hover,.catalog-filter a.active{border-color:var(--gold);color:var(--gold)}
+        .catalog-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;padding-bottom:80px}
+        .catalog-grid .product-card{display:block}
+        .catalog-grid .product-details{padding:18px}
+        .catalog-grid .product-details h3{font-size:.9rem;min-height:45px}
+        .catalog-grid .product-image{min-height:210px}
+        .catalog-grid .product-card:hover{border-color:rgba(241,189,50,.45);transform:translateY(-3px)}
+        .product-card{transition:transform .25s ease,border-color .25s ease}
+        .product-visual-label{position:absolute;inset:auto 0 14px;text-align:center;color:rgba(255,255,255,.75);font:800 .72rem "Montserrat",sans-serif;letter-spacing:.2em}
+        @media(max-width:800px){.catalog-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.catalog-toolbar{align-items:flex-start;flex-direction:column}}
+        @media(max-width:560px){.catalog-grid{grid-template-columns:1fr}.catalog-hero{padding:58px 0 42px}.catalog-grid .product-image{min-height:230px}}
+    </style>
+</head>
+<body>
+<header class="site-header">
+    <div class="container header-content">
+        <a href="../index.html" class="brand" aria-label="VERTT-ORDUM"><span class="brand-mark">V</span><span class="brand-text">VERTT-ORDUM</span></a>
+        <nav class="main-nav" aria-label="Navegação principal">
+            <a href="../index.html">Início</a><a href="index.html" class="active">Produtos</a><a href="../index.html#categorias">Categorias</a><a href="../paginas/sobre.html">Sobre</a><a href="../paginas/contato.html">Contato</a>
+        </nav>
+        <div class="header-actions">
+            <button type="button" class="header-icon" aria-label="Pesquisar" data-search-open><span>⌕</span></button>
+            <a href="#" class="header-icon cart-icon" aria-label="Carrinho"><span>🛒</span><small>0</small></a>
+        </div>
+    </div>
+</header>
+<main>
+    <section class="catalog-hero"><div class="container"><span class="section-label">CUIDADO EM CADA DETALHE</span><h1>ESCOLHA SEU<br><strong>PRÓXIMO NÍVEL.</strong></h1><p>Produtos para cuidar, limpar e valorizar seu veículo. Escolhas práticas, atenção aos detalhes e uma experiência VERTT-ORDUM do primeiro uso em diante.</p></div></section>
+    <section class="container">
+        <div class="catalog-toolbar"><p class="catalog-count">5 produtos em destaque</p><nav class="catalog-filter" aria-label="Categorias de produtos"><a class="active" href="index.html">Todos</a><a href="#lavagem">Lavagem</a><a href="#acabamento">Acabamento</a><a href="#acessorios">Acessórios</a></nav></div>
+        <div class="catalog-grid">
+            <article class="product-card" id="lavagem"><a href="shampoo-automotivo.html" aria-label="Ver Shampoo Automotivo VERTT-ORDUM" style="display:block;text-decoration:none;color:inherit"><div class="product-image product-1"><span class="product-visual-label">VERTT / SHAMPOO 1L</span></div><div class="product-details"><div class="rating">★★★★★ <span>Produto em destaque</span></div><h3>Shampoo Automotivo Premium 1L</h3><p class="price">R$ 49,90</p></div></a><div class="product-details" style="padding-top:0"><button type="button" class="add-cart">🛒 ADICIONAR AO CARRINHO</button></div></article>
+            <article class="product-card" id="pulverizador"><div class="product-image product-2"><span class="product-visual-label">PULVERIZADOR 2L</span></div><div class="product-details"><div class="rating">★★★★★ <span>Uso prático</span></div><h3>Pulverizador Automotivo 2L</h3><p class="price">R$ 79,90</p><button type="button" class="add-cart">🛒 ADICIONAR AO CARRINHO</button></div></article>
+            <article class="product-card"><div class="product-image product-3"><span class="product-visual-label">MICROFIBRA</span></div><div class="product-details"><div class="rating">★★★★★ <span>Acabamento</span></div><h3>Kit de Microfibras Premium</h3><p class="price">R$ 39,90</p><button type="button" class="add-cart">🛒 ADICIONAR AO CARRINHO</button></div></article>
+            <article class="product-card" id="acessorios"><div class="product-image product-4"><span class="product-visual-label">DETALHES CROMADOS</span></div><div class="product-details"><div class="rating">★★★★★ <span>Estilo</span></div><h3>Parafusos Cromados</h3><p class="price">R$ 59,90</p><button type="button" class="add-cart">🛒 ADICIONAR AO CARRINHO</button></div></article>
+            <article class="product-card" id="acabamento"><div class="product-image product-5"><span class="product-visual-label">CUIDADO COM PNEUS</span></div><div class="product-details"><div class="rating">★★★★★ <span>Kit de cuidado</span></div><h3>Kit Limpeza de Pneus Completo</h3><p class="price">R$ 69,90</p><button type="button" class="add-cart">🛒 ADICIONAR AO CARRINHO</button></div></article>
+        </div>
+    </section>
+</main>
+<script src="../js/config.js"></script><script src="../js/catalogo.js"></script><script src="../js/produto.js"></script><script src="../js/carrinho.js"></script>
+</body>
+</html>
