@@ -668,3 +668,8 @@ body.cart-open {
         gap: 10px;
     }
 }
+
+/* Liga o primeiro produto em destaque à sua página de detalhes. */
+.product-open{display:block;text-decoration:none;color:inherit}
+.product-title-link{color:inherit;text-decoration:none}
+.product-title-link:hover{color:var(--gold-light)}
