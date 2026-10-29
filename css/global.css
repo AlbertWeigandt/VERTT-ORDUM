@@ -165,24 +165,17 @@ button {
 }
 
 .brand-mark {
-    width: 34px;
-    height: 34px;
-
+    width: 42px;
+    height: 38px;
     display: grid;
     place-items: center;
-
-    border: 2px solid var(--gold);
-
-    border-radius: 7px;
-
-    color: var(--gold);
-
-    font-family: "Barlow Condensed", sans-serif;
-
-    font-size: 1.05rem;
-    font-weight: 900;
-
-    line-height: 1;
+    flex: 0 0 auto;
+    color: var(--white);
+}
+.brand-mark svg {
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 
 .brand-text {
