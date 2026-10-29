@@ -19,7 +19,21 @@
     function loadCart() {
         try {
             const saved = JSON.parse(localStorage.getItem(config.cartStorageKey) || "[]");
-            return Array.isArray(saved) ? saved : [];
+            if (!Array.isArray(saved)) return [];
+            return saved.filter(function (item) {
+                return item && typeof item.id === "string" &&
+                    /^produto-[1-9][0-9]{0,2}$/.test(item.id) &&
+                    typeof item.name === "string" && item.name.length > 0 &&
+                    Number.isFinite(item.price) && item.price > 0 &&
+                    Number.isInteger(item.quantity) && item.quantity >= 1 && item.quantity <= 99;
+            }).slice(0, 100).map(function (item) {
+                return {
+                    id: item.id,
+                    name: item.name.slice(0, 120),
+                    price: Math.round(item.price * 100) / 100,
+                    quantity: item.quantity
+                };
+            });
         } catch (_) {
             return [];
         }
@@ -35,7 +49,9 @@
     }
 
     function totalItems() {
-        return cart.reduce(function (sum, item) { return sum + item.quantity; }, 0);
+        return cart.reduce(function (sum, item) {
+            return sum + (Number.isInteger(item.quantity) ? item.quantity : 0);
+        }, 0);
     }
 
     function updateCount() {
@@ -46,15 +62,20 @@
     }
 
     function addItem(product) {
-        if (!product || !product.id || !product.name || !(product.price > 0)) return;
+        if (!product || typeof product.id !== "string" ||
+            !/^produto-[1-9][0-9]{0,2}$/.test(product.id) ||
+            typeof product.name !== "string" || !product.name.trim() ||
+            !Number.isFinite(product.price) || product.price <= 0) return;
+
         const existing = cart.find(function (item) { return item.id === product.id; });
         if (existing) {
+            if (existing.quantity >= 99) return;
             existing.quantity += 1;
         } else {
             cart.push({
                 id: product.id,
-                name: product.name,
-                price: product.price,
+                name: product.name.trim().slice(0, 120),
+                price: Math.round(product.price * 100) / 100,
                 quantity: 1
             });
         }
@@ -97,7 +118,7 @@
             const item = cart.find(function (entry) { return entry.id === id; });
             if (!item) return;
 
-            if (action.dataset.cartAction === "increase") item.quantity += 1;
+            if (action.dataset.cartAction === "increase" && item.quantity < 99) item.quantity += 1;
             if (action.dataset.cartAction === "decrease") item.quantity -= 1;
             if (action.dataset.cartAction === "remove" || item.quantity <= 0) {
                 cart = cart.filter(function (entry) { return entry.id !== id; });
