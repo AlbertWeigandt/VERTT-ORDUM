@@ -275,6 +275,11 @@
 
 @media (max-width: 560px) {
 
+    .site-header {
+        top: 56px;
+    }
+
+
     .container {
         width: calc(100% - 28px);
     }
