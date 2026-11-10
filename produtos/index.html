@@ -19,7 +19,7 @@
         .catalog-hero h1 strong{color:var(--gold)}
         .catalog-hero p{max-width:580px;color:var(--white-soft);line-height:1.8}
         .catalog-toolbar{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:30px 0}
-        .catalog-count{color:var(--white-muted);font-size:.8rem}
+        .catalog-count{color:var(--white-muted);font-size:.8rem}.catalog-search{display:grid;gap:7px;min-width:min(100%,280px);color:var(--white-muted);font-size:.62rem;font-weight:800;letter-spacing:.12em}.catalog-search input{width:100%;min-height:40px;padding:10px 12px;border:1px solid var(--border-strong);border-radius:0;background:#101010;color:var(--white);font:500 .78rem "Montserrat",sans-serif;outline:none}.catalog-search input:focus{border-color:var(--gold)}.catalog-empty{grid-column:1/-1;padding:32px 12px;color:var(--white-muted);text-align:center;border:1px solid var(--border)}
         .catalog-filter{display:flex;gap:8px;flex-wrap:wrap}
         .catalog-filter a{padding:9px 13px;border:1px solid var(--border-strong);color:var(--white-soft);font-size:.72rem;text-decoration:none}
         .catalog-filter a:hover,.catalog-filter a.active{border-color:var(--gold);color:var(--gold)}
@@ -52,7 +52,7 @@
 <main>
     <section class="catalog-hero"><div class="container"><span class="section-label">CUIDADO EM CADA DETALHE</span><h1>ESCOLHA SEU<br><strong>PRÓXIMO NÍVEL.</strong></h1><p>Produtos para cuidar, limpar e valorizar seu veículo. Escolhas práticas, atenção aos detalhes e uma experiência VERTT-ORDUM do primeiro uso em diante.</p></div></section>
     <section class="container">
-        <div class="catalog-toolbar"><p class="catalog-count">5 produtos em destaque</p><nav class="catalog-filter" aria-label="Categorias de produtos"><a class="active" href="index.html">Todos</a><a href="#lavagem">Lavagem</a><a href="#acabamento">Acabamento</a><a href="#acessorios">Acessórios</a></nav></div>
+        <div class="catalog-toolbar"><p class="catalog-count" data-catalog-count>5 produtos em destaque</p><label class="catalog-search"><span>BUSCAR PRODUTOS</span><input type="search" data-catalog-search placeholder="Digite o nome de um produto" autocomplete="off"></label><nav class="catalog-filter" aria-label="Categorias de produtos"><a class="active" href="index.html">Todos</a><a href="#lavagem">Lavagem</a><a href="#acabamento">Acabamento</a><a href="#acessorios">Acessórios</a></nav></div>
         <div class="catalog-grid">
             <article class="product-card" data-product-id="produto-1" id="lavagem"><a href="shampoo-automotivo.html" aria-label="Ver Shampoo Automotivo VERTT-ORDUM" style="display:block;text-decoration:none;color:inherit"><div class="product-image product-1"><span class="product-visual-label">VERTT / SHAMPOO 1L</span></div><div class="product-details"><div class="rating">SELEÇÃO VERTT-ORDUM <span>Produto em destaque</span></div><h3>Shampoo Automotivo Premium 1L</h3><p class="price">R$ 49,90</p></div></a><div class="product-details" style="padding-top:0"><button type="button" class="add-cart">🛒 ADICIONAR AO CARRINHO</button></div></article>
             <article class="product-card" data-product-id="produto-2" id="pulverizador"><div class="product-image product-2"><span class="product-visual-label">PULVERIZADOR 2L</span></div><div class="product-details"><div class="rating">SELEÇÃO VERTT-ORDUM <span>Uso prático</span></div><h3>Pulverizador Automotivo 2L</h3><p class="price">R$ 79,90</p><button type="button" class="add-cart">🛒 ADICIONAR AO CARRINHO</button></div></article>
@@ -60,6 +60,7 @@
             <article class="product-card" data-product-id="produto-4" id="acessorios"><div class="product-image product-4"><span class="product-visual-label">DETALHES CROMADOS</span></div><div class="product-details"><div class="rating">SELEÇÃO VERTT-ORDUM <span>Estilo</span></div><h3>Parafusos Cromados</h3><p class="price">R$ 59,90</p><button type="button" class="add-cart">🛒 ADICIONAR AO CARRINHO</button></div></article>
             <article class="product-card" data-product-id="produto-5" id="acabamento"><div class="product-image product-5"><span class="product-visual-label">CUIDADO COM PNEUS</span></div><div class="product-details"><div class="rating">SELEÇÃO VERTT-ORDUM <span>Kit de cuidado</span></div><h3>Kit Limpeza de Pneus Completo</h3><p class="price">R$ 69,90</p><button type="button" class="add-cart">🛒 ADICIONAR AO CARRINHO</button></div></article>
         </div>
+        <p class="catalog-empty" data-catalog-empty hidden>Nenhum produto encontrado. Tente outro termo.</p>
     </section>
 </main>
 <script src="../js/config.js"></script><script src="../js/catalogo.js"></script><script src="../js/produto.js"></script><script src="../js/carrinho.js"></script>
