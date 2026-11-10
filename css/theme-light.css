@@ -1,0 +1,239 @@
+/* VERTT-ORDUM — teste de identidade clara
+   Aplicado apenas à branch de desenvolvimento para avaliação visual. */
+:root {
+    --black: #f5f5f2;
+    --black-soft: #ffffff;
+    --black-card: #ffffff;
+    --white: #171916;
+    --white-soft: #555b55;
+    --white-muted: #747a73;
+    --gold: #c18b13;
+    --gold-light: #a87508;
+    --green: #176b3b;
+    --border: rgba(23, 25, 22, .12);
+    --border-strong: rgba(23, 25, 22, .22);
+}
+body,
+body.detail-wrap {
+    background: #f5f5f2 !important;
+    color: #171916 !important;
+}
+.site-header {
+    background: rgba(255,255,255,.96) !important;
+    border-bottom: 1px solid rgba(23,25,22,.10);
+}
+.site-header .brand-mark,
+.site-header .brand-text,
+.site-header .main-nav a,
+.site-header .header-icon {
+    color: #171916 !important;
+}
+.site-header .main-nav a:hover,
+.site-header .main-nav a.active,
+.site-header .header-icon:hover {
+    color: #a87508 !important;
+}
+.site-header .cart-icon small {
+    background: #c18b13 !important;
+    color: #fff !important;
+}
+body:has(.hero) .site-header {
+    background: linear-gradient(180deg, rgba(8,10,8,.82), rgba(8,10,8,.20)) !important;
+    border-bottom-color: rgba(255,255,255,.12);
+}
+body:has(.hero) .site-header .brand-mark,
+body:has(.hero) .site-header .brand-text,
+body:has(.hero) .site-header .main-nav a,
+body:has(.hero) .site-header .header-icon {
+    color: #fff !important;
+}
+body:has(.hero) .site-header .main-nav a:hover,
+body:has(.hero) .site-header .main-nav a.active {
+    color: #ffd45d !important;
+}
+.hero {
+    background: #111 !important;
+}
+.hero h1,
+.hero-side-copy p {
+    color: #fff;
+}
+.hero-description {
+    color: rgba(255,255,255,.82) !important;
+}
+.vehicle-strip,
+.categories-section,
+.products-section,
+.benefits-section,
+.site-footer,
+.footer-main,
+.footer-bottom {
+    background: #fff !important;
+    color: #171916 !important;
+}
+.vehicle-strip,
+.categories-section,
+.products-section,
+.benefits-section,
+.site-footer,
+.footer-main,
+.footer-bottom {
+    border-color: rgba(23,25,22,.12) !important;
+}
+.vehicle-intro p,
+.vehicle-card > span,
+.categories-intro h2,
+.products-heading h2,
+.product-details h3,
+.benefit-card h3,
+.site-footer h3,
+.site-footer p,
+.footer-bottom,
+.footer-links a {
+    color: #20241f !important;
+}
+.section-label,
+.see-all,
+.category-number,
+.category-content h3,
+.category-arrow,
+.rating {
+    color: #a87508 !important;
+}
+.category-card {
+    border-color: rgba(23,25,22,.16) !important;
+    /* Mantém as imagens de categoria escuras como contraste visual. */
+}
+.product-card {
+    background: #fff !important;
+    border-color: rgba(23,25,22,.14) !important;
+    box-shadow: 0 8px 24px rgba(20,24,18,.055);
+}
+.product-image {
+    background:
+        radial-gradient(circle at 50% 38%, rgba(193,139,19,.12), transparent 48%),
+        linear-gradient(135deg,#f1f1ed,#e4e5df) !important;
+}
+.product-1::after,
+.product-2::after,
+.product-3::after,
+.product-4::after,
+.product-5::after {
+    background: radial-gradient(circle,rgba(23,25,22,.09),transparent 58%) !important;
+}
+.product-visual-label {
+    color: rgba(23,25,22,.68) !important;
+}
+.product-details .price {
+    color: #171916 !important;
+}
+.add-cart,
+.button-primary {
+    background: #c18b13 !important;
+    color: #fff !important;
+}
+.add-cart:hover,
+.button-primary:hover {
+    background: #a87508 !important;
+}
+.field-city-banner {
+    /* Faixa de campanha mantida escura para criar ritmo entre áreas claras. */
+    color: #fff;
+}
+.catalog-hero,
+.simple-hero {
+    background:
+        radial-gradient(ellipse at 80% 0%,rgba(193,139,19,.13),transparent 45%),
+        linear-gradient(120deg,#fff,#eceee8) !important;
+    color: #171916 !important;
+}
+.catalog-hero h1,
+.simple-hero h1,
+.contact-panel h2,
+.about-content h2 {
+    color: #171916 !important;
+}
+.catalog-hero p,
+.simple-hero p,
+.about-content p,
+.contact-panel p {
+    color: #555b55 !important;
+}
+.catalog-search,
+.catalog-count,
+.catalog-filter a,
+.crumb,
+.crumb a {
+    color: #555b55 !important;
+}
+.catalog-search input {
+    background: #fff !important;
+    color: #171916 !important;
+    border-color: rgba(23,25,22,.22) !important;
+}
+.catalog-filter a {
+    border-color: rgba(23,25,22,.20) !important;
+}
+.catalog-filter a:hover,
+.catalog-filter a.active {
+    color: #a87508 !important;
+    border-color: #c18b13 !important;
+}
+.catalog-empty {
+    color: #555b55 !important;
+    border-color: rgba(23,25,22,.16) !important;
+}
+.detail-visual,
+.story-art {
+    background:
+        radial-gradient(ellipse at 50% 48%,rgba(193,139,19,.14),transparent 48%),
+        linear-gradient(140deg,#fff,#e8eae4) !important;
+    border-color: rgba(23,25,22,.14) !important;
+}
+.detail-copy h1,
+.story-copy h2,
+.story-cta h2 {
+    color: #171916 !important;
+}
+.detail-copy p,
+.story-copy p,
+.story-cta p {
+    color: #555b55 !important;
+}
+.detail-price {
+    color: #a87508 !important;
+}
+.price-note,
+.detail-notes,
+.visual-caption {
+    color: #747a73 !important;
+}
+.outline-action {
+    color: #171916 !important;
+    border-color: rgba(23,25,22,.25) !important;
+}
+.story,
+.story:nth-of-type(even),
+.story-cta {
+    background: #fff !important;
+    border-color: rgba(23,25,22,.12) !important;
+}
+.story-art .car-shine {
+    box-shadow: 0 20px 32px rgba(0,0,0,.18) !important;
+}
+.about-note,
+.contact-panel {
+    background: #fff !important;
+    border-color: rgba(23,25,22,.14) !important;
+    color: #555b55 !important;
+    box-shadow: 0 8px 24px rgba(20,24,18,.045);
+}
+.contact-status {
+    background: rgba(193,139,19,.08) !important;
+    color: #555b55 !important;
+}
+@media (max-width: 800px) {
+    body:has(.hero) .site-header {
+        background: rgba(8,10,8,.94) !important;
+    }
+}
