@@ -32,6 +32,17 @@ body { overflow-x: clip; }
   border-bottom: 1px solid rgba(23,35,45,.10) !important;
   box-shadow: 0 5px 22px rgba(20,42,58,.06);
 }
+
+/* Nas páginas internas, o cabeçalho ocupa seu próprio espaço.
+   Assim ele não cobre o título/eyebrow do início da página.
+   A Home mantém o cabeçalho sobreposto ao banner principal. */
+body:not(:has(.hero)) .site-header {
+  position: relative !important;
+  top: auto !important;
+  left: auto;
+  right: auto;
+  width: 100%;
+}
 .site-header .brand-mark, .site-header .brand-text,
 .site-header .main-nav a, .site-header .header-icon { color: #17232d !important; }
 .site-header .main-nav a:hover, .site-header .main-nav a.active,
